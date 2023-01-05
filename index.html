@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Challenge Alura</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <section class="input">
-        <form action="">
-            <label for="in"></label>
-            <input type="text" id="in">
+<html lang="sp">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Challenge Alura</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="/img/Logo.svg" />
+    </head>
+    <body>
+        <img
+            src="img/Logo.svg"
+            alt="logo"
+            style="
+                display: inline-block;
+                position: absolute;
+                height: 5vh;
+                width: auto;
+                top: 20px;
+            "
+        />
+        <main>
+            <section class="input">
+                <textarea
+                    name=""
+                    placeholder="Ingrese el texto aqu&iacute"
+                    id="in"
+                ></textarea>
+                <div class="inferior">
+                    <div class="info">
+                        <img src="img/Vector.svg" alt="warning" /> Solo letras
+                        min&uacute;sculas y sin acentos.
+                    </div>
+                    <div class="buttons">
+                        <button class="encriptar" id="enc">Encriptar</button>
+                        <button class="desenciptar" id="desc">
+                            Desencriptar
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="output">
+                <div class="card conTexto" id="conTexto" style="display: none">
+                    <p class="out" id="salida"></p>
+                    <button id="copy">Copiar</button>
+                </div>
 
-    </section>
-    <section class="output">
-        <div class out></div>
-        <button id="copy"> Copiar</button>
-    </section>
-  </body>
+                <div class="card sinTexto" id="sinTexto">
+                    <img src="img/Muñeco.svg" alt="predeterminado" />
+                    <h3>Ning&uacute;n mensaje fue encontrado</h3>
+                    <p>Ingrese el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </section>
+        </main>
+    </body>
+
+    <script src="script.js"></script>
 </html>

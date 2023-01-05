@@ -1,20 +1,192 @@
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f5fc;
+    display: flex;
+    font-family: "Inter";
 }
 .input {
-  width: 70%;
-  height: 100vh;
-  background-color: gray;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#in {
+    height: 70vh;
+    width: 70%;
+    border: 0;
+    background-color: #f3f5fc;
+    color: #0a3871;
+    font-size: 32px;
+    font-family: "Inter";
+    font-weight: 400;
+    resize: none;
+}
+#in::placeholder {
+    color: #0a3871;
+}
+#in:focus {
+    outline: 0;
 }
 
-@media screen and (max-width: 900px) {
-  * {
-    background-color: aqua;
-  }
+.inferior {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    left: 0;
+}
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.inferior button {
+    margin: 10px 20px;
+    width: 10vw;
+    aspect-ratio: 3.5;
+    min-width: 250px;
+    font-size: 1em;
+    color: #0a3871;
+    border-width: 0.5px;
+    border-radius: 24px;
+    cursor: pointer;
+}
+.buttons .encriptar {
+    background-color: #0a3871;
+    color: white;
+}
+.inferior button:active {
+    scale: 103%;
+}
+.output {
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    margin: 5px 10px;
+    color: #0a3871;
+}
+.card {
+    height: 90vh;
+    width: 85%;
+    min-width: 380px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0px 0px 5px 0.05px black;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+.sinTexto {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sinTexto h3 {
+    max-width: 100%;
+    font-size: 24px;
+
+    font-weight: 700;
+}
+.out {
+    margin-top: 20px;
+    max-width: 100%;
+    height: 70%;
+    padding: 30px;
+    color: #0a3871;
+    font-size: 30px;
+    font-family: "Inter";
+    font-weight: 400;
+
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+
+#copy {
+    margin: 24px auto;
+    width: 85%;
+    height: 10%;
+    font-size: 1em;
+    color: #0a3871;
+    border-width: 0.5px;
+    border-color: #0a3871;
+    background-color: white;
+    border-radius: 24px;
+    transition: all 0.5s;
+}
+#copy:hover {
+    background-color: #0a3871;
+    color: white;
+    cursor: pointer;
+}
+#copy:active {
+    scale: 103%;
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        background-color: #f3f5fc;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+    }
+    .input {
+        width: 100%;
+    }
+    .inferior {
+        align-items: center;
+    }
+    .output {
+        position: relative;
+        top: 50px;
+        width: 100%;
+        justify-content: center;
+    }
+    .card {
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .card img {
+        display: none;
+    }
+    #copy {
+        min-height: 80px;
+    }
 }
 @media screen and (max-width: 520px) {
-  * {
-    background-color: gray;
-  }
+    main {
+        max-width: 100%;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .output {
+        align-items: center;
+        max-width: 100%;
+        display: flex;
+    }
+    .card {
+        min-width: 50px;
+        align-items: center;
+        display: none;
+    }
+    #copy {
+        width: 80%;
+        margin: 10px;
+    }
 }
